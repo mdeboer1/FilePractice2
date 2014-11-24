@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author mdeboer1
  */
-public class MailListConsoleOutput implements Comparable<MailListConsoleOutput>{
+public class MailListConsoleOutput implements Comparable<MailListConsoleOutput>, MailListOutput{
     private List<String> mailList;
     public static int outputCount = 0;
     private int count;
@@ -22,6 +22,7 @@ public class MailListConsoleOutput implements Comparable<MailListConsoleOutput>{
         count = outputCount;
     }
     
+    @Override
     public final void outputData(List<String> list){
         mailList = list;
         int lineNumber = 0;
